@@ -13,35 +13,19 @@ MonoBehaviour:
   m_Name: Mario
   m_EditorClassIdentifier: 
   spriteRotations:
-  - sprite: {fileID: -1342084208, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
+  - sprite: {fileID: -1718327176, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     rotation: 0
-  - sprite: {fileID: 852569952, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
-    rotation: 22.5
-  - sprite: {fileID: 354459330, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
+  - sprite: {fileID: -2139829885, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     rotation: 45
-  - sprite: {fileID: -653890489, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
-    rotation: 67.5
-  - sprite: {fileID: 1479538439, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
+  - sprite: {fileID: 615537432, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     rotation: 90
-  - sprite: {fileID: -663650603, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
-    rotation: 112.5
-  - sprite: {fileID: -1157982904, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
+  - sprite: {fileID: 1202591448, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     rotation: 135
-  - sprite: {fileID: -1419868520, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
-    rotation: 157.5
-  - sprite: {fileID: 1263807903, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
+  - sprite: {fileID: -859399301, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     rotation: 180
-  - sprite: {fileID: 1436917530, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
-    rotation: 202.5
-  - sprite: {fileID: 1925291172, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
+  - sprite: {fileID: 234300598, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     rotation: 225
-  - sprite: {fileID: -1361970782, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
-    rotation: 247.5
-  - sprite: {fileID: 270391944, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
+  - sprite: {fileID: -1136090883, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     rotation: 270
-  - sprite: {fileID: 1538758589, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
-    rotation: 292.5
-  - sprite: {fileID: -182163187, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
+  - sprite: {fileID: 97442412, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     rotation: 315
-  - sprite: {fileID: -894100172, guid: 23b52ca8bbd62af47b2972ff66cc2727, type: 3}
-    rotation: 337.5

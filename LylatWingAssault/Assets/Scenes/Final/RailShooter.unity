@@ -306,7 +306,7 @@ MonoBehaviour:
   xyspeed: 12
   lookSpeed: 10000
   forwardSpeed: 12
-  joystick: 1
+  joystick: 0
   leanMultiplier: 1.5
 --- !u!54 &1019936361
 Rigidbody:
@@ -636,6 +636,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 61335ebaa2988bb4eb34634674859976, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc82bb33578e0394fa07ba1a9021cad9, type: 2}
     - target: {fileID: 919132149155446097, guid: 61335ebaa2988bb4eb34634674859976, type: 3}
       propertyPath: m_Name
       value: VH_Arwing

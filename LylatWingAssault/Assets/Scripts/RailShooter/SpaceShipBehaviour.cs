@@ -55,7 +55,7 @@ public class SpaceShipBehaviour : MonoBehaviour
     void RotationLook(float h, float v, float speed)
     {
         aimTarget.parent.position = Vector3.zero;
-        aimTarget.localPosition = Vector3.Lerp(aimTarget.localPosition, new Vector3(h* leanMultiplier, v * leanMultiplier, 1), Time.deltaTime);
+        aimTarget.localPosition = Vector3.Slerp(aimTarget.localPosition, new Vector3(h* leanMultiplier, v * leanMultiplier, 1.5f), Time.deltaTime);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position), Mathf.Deg2Rad * speed * Time.deltaTime);
     }
 

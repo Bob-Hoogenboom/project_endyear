@@ -11,7 +11,7 @@ public class SpriteBillboard : MonoBehaviour
 
     private Transform _t;
 
-    [SerializeField] private Transform _kartRotation;
+    [SerializeField] private Transform _vehicle;
 
 
     void Start()
@@ -19,6 +19,11 @@ public class SpriteBillboard : MonoBehaviour
         _t = transform;
         _sprite = GetComponentInChildren<SpriteRenderer>();
         _billboard = _sprite.transform;
+
+        if ( _vehicle == null)
+        {
+            _vehicle = transform;
+        }
     }
 
     void Update()
@@ -29,7 +34,7 @@ public class SpriteBillboard : MonoBehaviour
 
         // Change this with your own sprite animation stuff
         Vector3 Angle = cameraDirection.Angle;
-        var kartRotation = _kartRotation.localEulerAngles.y;
+        var kartRotation = _vehicle.localEulerAngles.y;
         var sumRotation = Angle.x - kartRotation;
 
         if (sumRotation > 360)
