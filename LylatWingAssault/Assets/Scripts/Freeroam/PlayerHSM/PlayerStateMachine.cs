@@ -6,6 +6,26 @@ using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
+    [Header("States")]
+    private PlayerBaseState _currentState;
+    private PlayerStateFactory _states;
+
+    // >>>>>[Header("Getters & Setters")]
+    public CharacterController CharacterController { get { return _characterController; } }
+    public PlayerBaseState CurrentState {  get { return _currentState; } set { _currentState = value; } }
+    
+
+    public float InitialJumpVelocity { get { return _initialJumpVelocity; } }
+    public bool IsJumpPressed { get { return _isJumpPressed; }}
+    public bool IsJumping { get { return _isJumping; } set { _isJumping = value; } }
+    public float CurrentMovementY { get { return currentMovement.y; } set { currentMovement.y = value; } }
+    public float AppliedMovementY { get { return _appliedMovement.y; } set { _appliedMovement.y = value; } }
+
+
+    public float Gravity { get { return _gravity; } }
+    public float GroundedGravity { get { return _groundedGravity; } }
+
+
     [Header("References")]
     private CharacterController _characterController;
     private Transform _cam;
@@ -30,6 +50,7 @@ public class PlayerStateMachine : MonoBehaviour
     private Vector3 _appliedMovement;
     private bool _moving;
     private bool _isJumpPressed;
+
     private bool _isJumping;
 
     private void Awake()
@@ -37,6 +58,10 @@ public class PlayerStateMachine : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
         _cam = Camera.main.transform;
         SetJumpVariables();
+
+        _states = new PlayerStateFactory(this);
+        _currentState = _states.Grounded();
+        _currentState.EnterState();
     }
 
     private void SetJumpVariables()
@@ -55,7 +80,7 @@ public class PlayerStateMachine : MonoBehaviour
 
 
         HandleRotation();
-
+        _currentState.UpdateState();
         Move();
     }
 

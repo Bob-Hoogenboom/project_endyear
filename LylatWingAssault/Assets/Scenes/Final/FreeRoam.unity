@@ -325,7 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 867958965}
   - component: {fileID: 867958967}
-  - component: {fileID: 867958966}
+  - component: {fileID: 867958968}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -350,23 +350,6 @@ Transform:
   - {fileID: 1908579797}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &867958966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867958964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0a91e5d4489ef4697359e515ceb6a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  _initialJumpVelocity: 1
-  maxJumpheight: 1
-  maxJumpTime: 0.75
-  _turnSmoothTime: 5
 --- !u!143 &867958967
 CharacterController:
   m_ObjectHideFlags: 0
@@ -393,6 +376,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!114 &867958968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867958964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269adb9d122b7ba43a327a145337e14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  _initialJumpVelocity: 0
+  maxJumpheight: 1
+  maxJumpTime: 0.75
+  _turnSmoothTime: 0.1
 --- !u!1 &1246295478
 GameObject:
   m_ObjectHideFlags: 0

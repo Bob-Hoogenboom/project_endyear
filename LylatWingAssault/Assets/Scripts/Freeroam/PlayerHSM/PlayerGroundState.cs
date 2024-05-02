@@ -1,18 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerGroundState : MonoBehaviour
+public class PlayerGroundState : PlayerBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public PlayerGroundState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
+        : base(currentContext, playerStateFactory) { }
+
+public override void EnterState()
     {
-        
+        _ctx.CurrentMovementY = _ctx.GroundedGravity;
+        _ctx.AppliedMovementY = _ctx.GroundedGravity;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void UpdateState()
     {
-        
+        CheckSwitchState();
+    }
+
+    public override void ExitState()
+    {
+
+    }
+
+    public override void InitializeSubState()
+    {
+
+    }
+
+    public override void CheckSwitchState()
+    {
+        //if the player is grounded and jump is pressed, switch to jumpState;
+        if (_ctx.IsJumpPressed)
+        {
+            SwitchState(_factory.Jump());
+        }
     }
 }
