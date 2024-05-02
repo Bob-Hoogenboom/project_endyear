@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   _initialJumpVelocity: 1
-  maxJumpheight: 2
+  maxJumpheight: 1
   maxJumpTime: 0.75
   _turnSmoothTime: 5
 --- !u!143 &867958967

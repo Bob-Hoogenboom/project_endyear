@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private float _turnSmoothTime = 0.1f;
 
     private Vector3 currentMovement;
+    private Vector3 _appliedMovement;
     private bool _moving;
     private bool _isJumpPressed;
     private bool _isJumping;
@@ -54,10 +55,11 @@ public class PlayerController : MonoBehaviour
 
 
         HandleRotation();
+        
         Move();
+
         ApplyGravity();
         HandleJump();
-
     }
 
     private void SetJumpVariables()
@@ -72,7 +74,8 @@ public class PlayerController : MonoBehaviour
         if (!_isJumping && _characterController.isGrounded && Input.GetKey(KeyCode.Space))
         {
             _isJumping = true;
-            currentMovement.y = _initialJumpVelocity * .5f;
+            currentMovement.y = _initialJumpVelocity;
+            _appliedMovement.y = _initialJumpVelocity;
         }
         else if (!_isJumpPressed && _isJumping && _characterController.isGrounded)
         {
@@ -99,7 +102,10 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        _characterController.Move(currentMovement * speed * Time.deltaTime);
+        _appliedMovement.x = currentMovement.x;
+        _appliedMovement.z = currentMovement.z;
+
+        _characterController.Move(_appliedMovement * speed * Time.deltaTime);
     }
 
     private void ApplyGravity()
@@ -114,17 +120,15 @@ public class PlayerController : MonoBehaviour
         else if (isFalling)
         {
             float previousYVelocity = currentMovement.y;
-            float newYVelocity = currentMovement.y + (_gravity * fallMultiplier * Time.deltaTime);
-            float nextYVelocity = (previousYVelocity + newYVelocity) * 0.5f;
-            currentMovement.y = nextYVelocity;
+            currentMovement.y = currentMovement.y + (_gravity * fallMultiplier * Time.deltaTime);
+            _appliedMovement.y = Mathf.Max((previousYVelocity + currentMovement.y) * 0.5f, -20.0f);
         }
         else
         {
             //Velocity Verlet instead of Euler integration
             float previousYVelocity = currentMovement.y;
-            float newYVelocity = currentMovement.y +  (_gravity * Time.deltaTime);
-            float nextYVelocity = (previousYVelocity + newYVelocity) * 0.5f;
-            currentMovement.y = nextYVelocity;
+            currentMovement.y = currentMovement.y +  (_gravity * Time.deltaTime);
+            _appliedMovement.y = (previousYVelocity + currentMovement.y) * 0.5f;
         }
     }
 }
