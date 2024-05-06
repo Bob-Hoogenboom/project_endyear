@@ -1,12 +1,18 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerJumpState : PlayerBaseState
 {
     public PlayerJumpState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
-        : base(currentContext, playerStateFactory) { }
+        : base(currentContext, playerStateFactory) 
+    {
+        _isRootState = true; 
+    }
 
     public override void EnterState()
     {
+        //enter animation for eight cardinal directions
+        _ctx.HandleAnimation(_ctx.JumpAnim);
         HandleJump();
     }
 
@@ -23,7 +29,7 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void InitializeSubState()
     {
-
+        
     }
 
     public override void CheckSwitchState()
@@ -51,6 +57,9 @@ public class PlayerJumpState : PlayerBaseState
             float previousYVelocity = _ctx.CurrentMovementY;
             _ctx.CurrentMovementY = _ctx.CurrentMovementY + (_ctx.Gravity * fallMultiplier * Time.deltaTime);
             _ctx.AppliedMovementY = Mathf.Max((previousYVelocity + _ctx.CurrentMovementY) * 0.5f, -20.0f);
+
+            //# falling anim envoked once not updated
+            //_ctx.HandleAnimation(_ctx.FallAnim);
         }
         else
         {

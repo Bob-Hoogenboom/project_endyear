@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class PlayerIdleState : PlayerBaseState
 {
     public PlayerIdleState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
@@ -5,7 +7,11 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void EnterState()
     {
-        throw new System.NotImplementedException();
+        //enter animation for eight cardinal directions
+        _ctx.HandleAnimation(_ctx.IdleAnim);
+
+        _ctx.AppliedMovementX = 0;
+        _ctx.AppliedMovementZ = 0;
     }
 
     public override void UpdateState()
@@ -15,16 +21,18 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void ExitState()
     {
-        throw new System.NotImplementedException();
     }
 
     public override void InitializeSubState()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void CheckSwitchState()
     {
-        throw new System.NotImplementedException();
+        if (_ctx.IsMovePressed)
+        {
+            SwitchState(_factory.Walk());
+        }
     }
 }

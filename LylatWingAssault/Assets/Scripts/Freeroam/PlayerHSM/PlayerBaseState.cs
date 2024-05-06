@@ -1,7 +1,12 @@
 public abstract class PlayerBaseState 
 {
+    //# protected to private and set kontsex in the concrete states
+    protected bool _isRootState = false;
     protected PlayerStateMachine _ctx;
     protected PlayerStateFactory _factory;
+    protected PlayerBaseState _currentSubState;
+    protected PlayerBaseState _currentSuperState;
+
     public PlayerBaseState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
     {
         _ctx = currentContext;
@@ -14,7 +19,14 @@ public abstract class PlayerBaseState
     public abstract void CheckSwitchState();
     public abstract void InitializeSubState();
 
-    private void UpdateStates() { }
+    public void UpdateStates() 
+    {
+        UpdateState();
+        if (_currentSubState != null) 
+        { 
+            _currentSubState.UpdateStates();
+        }
+    }
     protected void SwitchState(PlayerBaseState newState) {
         //current state exits state
         ExitState();
@@ -22,11 +34,25 @@ public abstract class PlayerBaseState
         // new state enters state
         newState.EnterState();
 
-        //switch current state of context
-        _ctx.CurrentState = newState;
+        if (_isRootState)
+        {
+            //switch current state of context
+            _ctx.CurrentState = newState;
+        }
+        else if (_currentSuperState != null)
+        {
+            _currentSuperState.SetSubState(newState);
+        }
     }
-    protected void SetSuperState() { }
-    protected void SetSubState() { }
+    protected void SetSuperState(PlayerBaseState newSuperState) 
+    {
+        _currentSuperState = newSuperState;
+    }
+    protected void SetSubState(PlayerBaseState newSubState) 
+    {
+        _currentSubState = newSubState;
+        newSubState.SetSuperState(this);    
+    }
 
 
 

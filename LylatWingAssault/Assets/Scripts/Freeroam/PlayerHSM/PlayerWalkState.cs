@@ -1,3 +1,4 @@
+using UnityEngine;
 
 public class PlayerWalkState : PlayerBaseState
 {
@@ -6,26 +7,32 @@ public class PlayerWalkState : PlayerBaseState
 
     public override void EnterState()
     {
-        throw new System.NotImplementedException();
+        //enter animation for eight cardinal directions
+        _ctx.HandleAnimation(_ctx.WalkAnim);
     }
 
     public override void UpdateState()
     {
         CheckSwitchState();
+
+        _ctx.AppliedMovementX = _ctx.CurrentMovementX;
+        _ctx.AppliedMovementZ = _ctx.CurrentMovementZ;
     }
 
     public override void ExitState()
     {
-        throw new System.NotImplementedException();
     }
 
     public override void InitializeSubState()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void CheckSwitchState()
     {
-        throw new System.NotImplementedException();
+        if (!_ctx.IsMovePressed)
+        {
+            SwitchState(_factory.Idle());
+        }
     }
 }
