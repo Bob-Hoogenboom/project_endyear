@@ -511,7 +511,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4346857528330200937, guid: 56392aa58441e2246b8e78facfcc7dec, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.62600034
+      value: 0.7679169
       objectReference: {fileID: 0}
     - target: {fileID: 4346857528330200937, guid: 56392aa58441e2246b8e78facfcc7dec, type: 3}
       propertyPath: m_LocalRotation.x
@@ -519,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4346857528330200937, guid: 56392aa58441e2246b8e78facfcc7dec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7798228
+      value: 0.6405495
       objectReference: {fileID: 0}
     - target: {fileID: 6517579099562444674, guid: 56392aa58441e2246b8e78facfcc7dec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -566,7 +566,8 @@ PrefabInstance:
       value: PlayerCharacter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4335383053179794468, guid: 56392aa58441e2246b8e78facfcc7dec, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56392aa58441e2246b8e78facfcc7dec, type: 3}

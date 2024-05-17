@@ -64,7 +64,7 @@ public class PlayerStateMachine : MonoBehaviour
     [Header("Constants")]
     [SerializeField] private float turnSmoothTime = 5f;
     private float _gravity = -9.8f;
-    private float _groundedGravity = -0.1f;
+    private float _groundedGravity = -2f;
 
 
     [Header("Input")]

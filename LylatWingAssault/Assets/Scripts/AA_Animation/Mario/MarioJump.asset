@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0cf37e99fcb584dbdf7be0944f8cbf, type: 3}
+  m_Name: MarioJump
+  m_EditorClassIdentifier: 
+  animName: Mario Jumping
+  animType: 1
+  animMode: 0
+  speed: 0.01
+  frameList:
+  - sprites:
+    - {fileID: -1763448079, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -551554907, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1331845438, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1555514722, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -3274041, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -1622601994, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -170334091, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -119603428, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}

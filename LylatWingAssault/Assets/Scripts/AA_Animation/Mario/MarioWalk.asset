@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0cf37e99fcb584dbdf7be0944f8cbf, type: 3}
+  m_Name: MarioWalk
+  m_EditorClassIdentifier: 
+  animName: Mario Walking
+  animType: 1
+  animMode: 1
+  speed: 16
+  frameList:
+  - sprites:
+    - {fileID: -1333014430, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1068761983, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1492852941, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 560628038, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1906895753, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1157180330, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 711738182, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -1918826263, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+  - sprites:
+    - {fileID: -1333014430, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1240239128, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 326975413, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 2049340504, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -1104718718, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -915462400, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1074281776, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 568475467, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+  - sprites:
+    - {fileID: 785187500, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -1974333387, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 601674387, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -241422872, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -1473771984, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 804025694, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: -2130460903, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 615273817, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
