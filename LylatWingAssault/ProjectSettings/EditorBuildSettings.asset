@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Final/MainMenu.unity
     guid: 93bd82610f107b74b944aba4062b9eec
   - enabled: 1
-    path: Assets/Scenes/Final/FreeRoam.unity
-    guid: ff40a4ae4b6439d4689a0cf9fb646adf
+    path: Assets/Scenes/Final/DelfinoPlaza/DelfinoPlaza.unity
+    guid: 375b0a4620dcfa648a797f5b568303a8
   - enabled: 1
-    path: Assets/Scenes/Final/RailShooter.unity
+    path: Assets/Scenes/Final/RailShooter/RailShooter.unity
     guid: 910b752c57f933744a22def8ee5efc86
   m_configObjects: {}

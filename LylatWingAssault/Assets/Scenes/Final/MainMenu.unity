@@ -723,10 +723,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 996783079}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 5
+      - m_Target: {fileID: 996783080}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1274,6 +1274,7 @@ GameObject:
   - component: {fileID: 996783076}
   - component: {fileID: 996783075}
   - component: {fileID: 996783079}
+  - component: {fileID: 996783080}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1377,6 +1378,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ca99575b7597347a5f2e095d17189a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &996783080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996783074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6c660acf7050c46b0f3f398166394d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  crossfadeTime: 0
 --- !u!1 &1140157369
 GameObject:
   m_ObjectHideFlags: 0

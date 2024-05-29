@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890888330342243228}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.24143289, z: -0, w: 0.97041756}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalRotation: {x: -0, y: 0.98066247, z: -0, w: -0.1957068}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1661287375, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+  m_Sprite: {fileID: -1035642991, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 5282242616824207120}
   m_Layer: 0
   m_Name: PlayerCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,8 +154,8 @@ CharacterController:
   m_Height: 1.5
   m_Radius: 0.4
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.4
+  m_StepOffset: 0.1
+  m_SkinWidth: 0.1
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!114 &5282242616824207120
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTransform: {fileID: 6517579099562444674}
-  speed: 9
+  speed: 12
   initialJumpVelocity: 0
   maxJumpheight: 0.5
   maxJumpTime: 0.6
@@ -181,4 +181,4 @@ MonoBehaviour:
   jumpAnim: {fileID: 11400000, guid: 65abd465285d554449da49384302e69f, type: 2}
   fallAnim: {fileID: 11400000, guid: 49d32d71a7803044b8e1c783f3460249, type: 2}
   deathAnim: {fileID: 11400000, guid: 540c163efa095a94e94f0c1466abe3c5, type: 2}
-  turnSmoothTime: 5
+  turnSmoothTime: 8
