@@ -303,7 +303,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -363,7 +363,7 @@ MonoBehaviour:
   angleY: 35
   rotationSmoothing: 10
   rotationSensitivity: 7
-  distance: 10
+  distance: 12
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,11 +406,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 61335ebaa2988bb4eb34634674859976, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61335ebaa2988bb4eb34634674859976, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61335ebaa2988bb4eb34634674859976, type: 3}
       propertyPath: m_LocalPosition.z
@@ -542,11 +542,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1850063070936465329, guid: b056cbc861fd5a0479f3e5ad33b02336, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1850063070936465329, guid: b056cbc861fd5a0479f3e5ad33b02336, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.646
       objectReference: {fileID: 0}
     - target: {fileID: 1850063070936465329, guid: b056cbc861fd5a0479f3e5ad33b02336, type: 3}
       propertyPath: m_LocalPosition.z
@@ -580,6 +580,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2057487433434324118, guid: b056cbc861fd5a0479f3e5ad33b02336, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -859399301, guid: f03279ee2da5ec44197f1692b6f6ae14, type: 3}
     - target: {fileID: 2201504713187612042, guid: b056cbc861fd5a0479f3e5ad33b02336, type: 3}
       propertyPath: m_Name
       value: MarioKart
