@@ -18,11 +18,11 @@ MonoBehaviour:
   speed: 0.01
   frameList:
   - sprites:
-    - {fileID: -1763448079, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
-    - {fileID: -551554907, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
-    - {fileID: 1331845438, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
-    - {fileID: 1555514722, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
-    - {fileID: -3274041, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
-    - {fileID: -1622601994, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
-    - {fileID: -170334091, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
-    - {fileID: -119603428, guid: 2901bf6c828c7434f83fdac6b130ae29, type: 3}
+    - {fileID: 1295587060, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
+    - {fileID: 1450334135, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
+    - {fileID: 1600647408, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
+    - {fileID: 1551157987, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
+    - {fileID: 1264662438, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
+    - {fileID: -687426708, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
+    - {fileID: -128786573, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
+    - {fileID: 600701756, guid: bac2d449635f57c4d973c3c7e761f033, type: 3}
