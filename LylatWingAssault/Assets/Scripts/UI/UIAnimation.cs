@@ -8,6 +8,7 @@ public class UiAnimation : MonoBehaviour
 
     public Sprite[] sprites;
     public float speed = .02f;
+    public bool loop;
     public bool playOnStart;
 
     private int spriteIndex;
@@ -41,7 +42,10 @@ public class UiAnimation : MonoBehaviour
         if (spriteIndex >= sprites.Length)
         {
             spriteIndex = 0;
-            IsDone = true;
+            if (!loop)
+            {
+                IsDone = true;
+            }
         }
         m_Image.sprite = sprites[spriteIndex];
         spriteIndex += 1;
