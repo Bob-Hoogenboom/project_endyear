@@ -7,7 +7,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private float crossfadeTime;
 
-    private int _crossfadeTrigger = Animator.StringToHash("StartCrossfade");
+    private int _crossfadeTrigger = Animator.StringToHash("StartFade");
 
     public void LoadNextLevel()
     {
