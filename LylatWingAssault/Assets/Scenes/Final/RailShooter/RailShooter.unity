@@ -1871,8 +1871,12 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7453400961721421138, guid: 49bb74ee962af7d40b5c8fa354eb2fea, type: 3}
+      propertyPath: m_Name
+      value: MagentaDeathPlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453400961721421138, guid: 49bb74ee962af7d40b5c8fa354eb2fea, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7453400961721421138, guid: 49bb74ee962af7d40b5c8fa354eb2fea, type: 3}
       propertyPath: m_StaticEditorFlags
