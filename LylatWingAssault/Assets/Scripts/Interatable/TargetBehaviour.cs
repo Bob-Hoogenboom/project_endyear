@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TargetBehaviour : MonoBehaviour, IDamagable
 {
@@ -8,13 +9,15 @@ public class TargetBehaviour : MonoBehaviour, IDamagable
 
     [Header("Variables")]
     public bool isBroken = false; 
-    [SerializeField] private int health;
-    private int _currentHealth;
+    [SerializeField] private int _currentHealth;
+
+    [Header("Events")]
+    public UnityEvent onHit;
 
 
     public int HitPoints
     {
-        get => health;
+        get => _currentHealth;
         set => _currentHealth = value;
     }
 
@@ -22,11 +25,12 @@ public class TargetBehaviour : MonoBehaviour, IDamagable
     {
         _currentHealth -= amount;
 
-        if (_currentHealth <= 0) BreakTarget();
+        if (_currentHealth == 0) BreakTarget();
     }
 
     private void BreakTarget() 
     {
+        onHit.Invoke();
         isBroken = true;
         render.material = inActive;
     }

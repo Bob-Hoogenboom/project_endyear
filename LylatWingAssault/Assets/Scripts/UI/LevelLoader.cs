@@ -14,6 +14,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(Crossfade(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void LoadMainMenu()
+    {
+        StartCoroutine(Crossfade(0));
+    }
+
     IEnumerator Crossfade(int sceneIndex)
     {
         //play crossfade animation

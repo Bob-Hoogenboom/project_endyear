@@ -1,14 +1,19 @@
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class SpaceShipBehaviour : MonoBehaviour
 {
-    [Header("Public References")]
+    [Header("References")]
     public Transform _playerModel;
     public Transform aimTarget;
     public Transform cameraParent;
     public CinemachineDollyCart dolly;
+    [Space]
+    public GameObject bulletPrefab;
+    public Transform shootOrigin;
 
+    [Header("Variables")]
     public float xyspeed = 16f;
     public float lookSpeed = 340f;
     public float forwardSpeed = 6f;
@@ -16,6 +21,11 @@ public class SpaceShipBehaviour : MonoBehaviour
     public bool joystick = true;
 
     public float leanMultiplier = 1.5f;
+
+    [SerializeField] private bool endOfTrackReached = false;
+
+    [Header("Events")]
+    public UnityEvent onDollyTrackEnded;
 
 
     // Start is called before the first frame update
@@ -31,11 +41,17 @@ public class SpaceShipBehaviour : MonoBehaviour
         float h = joystick ? Input.GetAxis("Horizontal") : Input.GetAxis("Mouse X");
         float v = joystick ? Input.GetAxis("Vertical") : Input.GetAxis("Mouse Y");
 
-        //Debug.Log(h + " horizontal + " + v + " vertical");
 
         LocalMove(h, v, xyspeed);
         RotationLook(h, v, lookSpeed);
-        HorizontalLean(_playerModel, h, 45, .1f);
+        HorizontalLean(_playerModel, h, 45, 1f);
+
+        DollyTrackCheck();
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
     }
 
     void LocalMove(float x, float y, float speed)
@@ -55,7 +71,7 @@ public class SpaceShipBehaviour : MonoBehaviour
     void RotationLook(float h, float v, float speed)
     {
         aimTarget.parent.position = Vector3.zero;
-        aimTarget.localPosition = Vector3.Slerp(aimTarget.localPosition, new Vector3(h* leanMultiplier, v * leanMultiplier, 1.5f), Time.deltaTime);
+        aimTarget.localPosition = Vector3.Slerp(aimTarget.localPosition, new Vector3(h* leanMultiplier, v * leanMultiplier, 2f), Time.deltaTime);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position), Mathf.Deg2Rad * speed * Time.deltaTime);
     }
 
@@ -70,11 +86,26 @@ public class SpaceShipBehaviour : MonoBehaviour
         target.localEulerAngles = new Vector3(targetEulerAngels.x, targetEulerAngels.y, Mathf.LerpAngle(targetEulerAngels.z, -axis * leanLimit, lerpTime));
     }
 
+    private void Shoot()
+    {
+        Instantiate(bulletPrefab, shootOrigin.position, shootOrigin.rotation);
+    }
+
+    //# Put this on a seperate script on the dolly itself, not on the player*
+    private void DollyTrackCheck()
+    {
+        if (dolly.m_Position >= dolly.m_Path.PathLength - 5 && !endOfTrackReached)
+        {
+            endOfTrackReached = true;
+            Debug.Log("End of the line kid");
+            onDollyTrackEnded.Invoke();
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(aimTarget.position, .5f);
         Gizmos.DrawSphere(aimTarget.position, .15f);
-
     }
 }
