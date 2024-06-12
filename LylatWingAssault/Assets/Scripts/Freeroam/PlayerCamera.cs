@@ -1,11 +1,7 @@
 using UnityEngine;
-using System.Collections;
-using UnityEditor.Build.Reporting;
-
 
 public class PlayerCamera : MonoBehaviour
 {
-
     public Transform target;
     public float angleY = 35;
     public float rotationSmoothing = 10;
